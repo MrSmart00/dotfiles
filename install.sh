@@ -13,9 +13,11 @@ for f in .??*; do
     [ "$f" = ".git" ] && continue
     [ "$f" = ".gitconfig.local.template" ] && continue
     [ "$f" = ".gitmodules" ] && continue
+    [ "$f" = ".gitignore" ] && continue
+    [ "$f" = ".DS_Store" ] && continue
 
     # シンボリックリンクを貼る
-    ln -snfv ${PWD}/"$f" ~/
+    ln -snfv ${PWD}/"$f" ~
 done
 
 echo "installing homebrew..."
@@ -49,13 +51,14 @@ done
 
 # install gui up
 casks=(
+    android-studio
+    bitwarden
     docker
     dropbox
+    font-hack-nerd-font
     iterm2
     visual-studio-code
     zoom
-    bitwarden
-    font-hack-nerd-font
 )
 
 echo "brew casks"
