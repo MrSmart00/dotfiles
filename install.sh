@@ -13,6 +13,8 @@ for f in .??*; do
     [ "$f" = ".git" ] && continue
     [ "$f" = ".gitconfig.local.template" ] && continue
     [ "$f" = ".gitmodules" ] && continue
+    [ "$f" = ".gitignore" ] && continue
+    [ "$f" = ".DS_Store" ] && continue
 
     # シンボリックリンクを貼る
     ln -snfv ${PWD}/"$f" ~/
@@ -53,6 +55,7 @@ casks=(
     dropbox
     iterm2
     visual-studio-code
+    android-studio
     zoom
     bitwarden
     font-hack-nerd-font
