@@ -63,6 +63,7 @@ casks=(
     visual-studio-code
     zoom
     brave-browser
+    slack
 )
 
 echo "brew casks"
@@ -78,7 +79,6 @@ echo "brew installed"
 # Xcode, Slack
 stores=(
     497799835
-    803453959
 )
 
 echo "app stores"
