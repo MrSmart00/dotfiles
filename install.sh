@@ -52,18 +52,19 @@ for formula in "${formulas[@]}"; do
     brew install $formula || brew upgrade $formula
 done
 
-# install gui up
+# install cask apps
 casks=(
     android-studio
     bitwarden
+    brave-browser
+    deepl
     docker
     dropbox
     font-fira-code-nerd-font
     iterm2
+    slack
     visual-studio-code
     zoom
-    brave-browser
-    slack
 )
 
 echo "brew casks"
@@ -76,7 +77,7 @@ brew cleanup
 echo "brew installed"
 
 # App Store
-# Xcode, Slack
+# Xcode
 stores=(
     497799835
 )
