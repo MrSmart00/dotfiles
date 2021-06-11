@@ -8,6 +8,9 @@ set -u
 BASEDIR=$(dirname $0)
 cd $BASEDIR
 
+sudo chown -R $(whoami) /usr/local/share/zsh /usr/local/share/zsh/site-functions
+chmod u+w /usr/local/share/zsh /usr/local/share/zsh/site-functions
+
 # dotfilesディレクトリにある、ドットから始まり2文字以上の名前のファイルに対して
 for f in .??*; do
     [ "$f" = ".git" ] && continue
@@ -55,7 +58,7 @@ casks=(
     bitwarden
     docker
     dropbox
-    font-hack-nerd-font
+    font-fira-code-nerd-font
     iterm2
     visual-studio-code
     zoom
