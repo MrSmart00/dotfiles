@@ -8,8 +8,7 @@ set -u
 BASEDIR=$(dirname $0)
 cd $BASEDIR
 
-sudo chown -R $(whoami) /usr/local/share/zsh /usr/local/share/zsh/site-functions
-chmod u+w /usr/local/share/zsh /usr/local/share/zsh/site-functions
+chmod g-w /usr/local/share/zsh /usr/local/share/zsh/site-functions
 
 ### Homebrew
 # dotfilesディレクトリにある、ドットから始まり2文字以上の名前のファイルに対して

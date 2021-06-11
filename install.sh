@@ -6,7 +6,6 @@ set -u
 formulas=(
     exa
     flutter
-    mas
     mint
     starship
 )
@@ -42,19 +41,6 @@ done
 brew cleanup
 
 echo "brew installed"
-
-# App Store
-# Xcode
-stores=(
-    497799835
-)
-
-echo "app stores"
-for store in "${stores[@]}"; do
-    mas install $store
-done
-
-echo "App Store installed"
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 source ~/.zshrc
