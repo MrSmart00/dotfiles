@@ -4,9 +4,10 @@
 set -u
 
 formulas=(
-    mint
+    exa
     flutter
     mas
+    mint
     starship
 )
 
