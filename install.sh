@@ -59,6 +59,7 @@ casks=(
     iterm2
     visual-studio-code
     zoom
+    brave-browser
 )
 
 echo "brew casks"
