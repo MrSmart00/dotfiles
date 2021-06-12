@@ -58,3 +58,6 @@ fi
 
 ### Boot rbenv
 eval "$(rbenv init -)"
+
+### Github CLI 補完
+eval "$(gh completion -s zsh)"

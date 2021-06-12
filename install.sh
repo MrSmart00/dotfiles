@@ -6,6 +6,8 @@ set -u
 formulas=(
     exa
     flutter
+    gh
+    bitrise
     mint
     starship
 )
