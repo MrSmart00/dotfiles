@@ -27,7 +27,6 @@ casks=(
     brave-browser
     deepl
     docker
-    dropbox
     font-hackgen-nerd
     iterm2
     slack
