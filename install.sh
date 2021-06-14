@@ -48,3 +48,5 @@ source ~/.zshrc
 zinit self-update
 
 echo "zinit inistalled"
+
+echo 'command_timeout = 10000' >> ~/.config/starship.toml
