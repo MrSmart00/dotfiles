@@ -23,6 +23,7 @@ done
 
 # install cask apps
 casks=(
+    alfred
     android-studio
     brave-browser
     deepl
