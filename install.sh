@@ -23,13 +23,13 @@ done
 
 # install cask apps
 casks=(
+    alacritty
     alfred
     android-studio
     brave-browser
     deepl
     docker
     font-hackgen-nerd
-    iterm2
     slack
     visual-studio-code
     zoom
