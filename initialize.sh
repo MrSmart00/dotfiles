@@ -14,7 +14,6 @@ chmod g-w /usr/local/share/zsh /usr/local/share/zsh/site-functions
 # dotfilesディレクトリにある、ドットから始まり2文字以上の名前のファイルに対して
 for f in .??*; do
     [ "$f" = ".git" ] && continue
-    [ "$f" = ".gitconfig.local.template" ] && continue
     [ "$f" = ".gitmodules" ] && continue
     [ "$f" = ".gitignore" ] && continue
     [ "$f" = ".DS_Store" ] && continue
