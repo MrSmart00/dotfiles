@@ -10,6 +10,7 @@ formulas=(
     gh
     git-delta
     mint
+    peco
     starship
     tmux
 )
