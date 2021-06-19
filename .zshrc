@@ -61,3 +61,7 @@ eval "$(rbenv init -)"
 
 ### Github CLI 補完
 eval "$(gh completion -s zsh)"
+
+if [ $SHLVL = 1 ]; then
+  tmux
+fi

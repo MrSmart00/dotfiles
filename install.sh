@@ -11,6 +11,7 @@ formulas=(
     git-delta
     mint
     starship
+    tmux
 )
 
 echo "brew tap"
