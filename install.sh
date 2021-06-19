@@ -4,10 +4,11 @@
 set -u
 
 formulas=(
+    bitrise
     exa
     flutter
     gh
-    bitrise
+    git-delta
     mint
     starship
 )

@@ -1,3 +1,20 @@
+[core]
+    excludesfile = ~/.gitignore
+    ignorecase = false
+    pager = delta
+
+[color]
+    ui = true
+
+[delta]
+    line-numbers=true
+
+[diff]
+    indent-heuristic = true
+
+[interactive]
+    diffFilter = delta --color-only
+
 [user]
 	name = MrSmart00
 	email = nexearth@gmail.com
