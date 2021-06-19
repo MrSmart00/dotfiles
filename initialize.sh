@@ -15,7 +15,6 @@ chmod g-w /usr/local/share/zsh /usr/local/share/zsh/site-functions
 for f in .??*; do
     [ "$f" = ".git" ] && continue
     [ "$f" = ".gitmodules" ] && continue
-    [ "$f" = ".gitignore" ] && continue
     [ "$f" = ".DS_Store" ] && continue
 
     # シンボリックリンクを貼る
