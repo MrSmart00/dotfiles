@@ -50,4 +50,8 @@ zinit self-update
 
 echo "zinit inistalled"
 
-echo 'command_timeout = 10000' >> ~/.config/starship.toml
+mkdir ~/.config
+
+ln -snfv ${PWD}/dotfiles/.config/starship.toml ~/.config
+
+echo "Starship Config inistalled"
