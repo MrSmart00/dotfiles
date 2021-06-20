@@ -4,6 +4,7 @@
 set -u
 
 formulas=(
+    bat
     bitrise
     exa
     flutter

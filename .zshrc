@@ -56,6 +56,8 @@ if [[ $(command -v exa) ]]; then
   alias l='clear && ls'
 fi
 
+alias cat='bat'
+
 ### Boot rbenv
 eval "$(rbenv init -)"
 
