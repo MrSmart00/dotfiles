@@ -3,11 +3,15 @@
 # 未定義な変数があったら途中で終了する
 set -u
 
+echo "brew tap"
+# brew tap thirdparty
+brew tap homebrew/cask-fonts
+brew tap beeftornado/rmtree
+
 formulas=(
     bat
     bitrise
     exa
-    flutter
     gh
     git-delta
     mint
@@ -15,10 +19,6 @@ formulas=(
     starship
     tmux
 )
-
-echo "brew tap"
-# brew tap thirdparty
-brew tap homebrew/cask-fonts
 
 echo "brew install formula"
 for formula in "${formulas[@]}"; do
@@ -31,8 +31,8 @@ casks=(
     alfred
     android-studio
     brave-browser
-    deepl
     docker
+    flutter
     font-hackgen-nerd
     slack
     visual-studio-code

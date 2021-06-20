@@ -65,21 +65,13 @@ eval "$(rbenv init -)"
 eval "$(gh completion -s zsh)"
 
 ### peco settings
-# 過去に実行したコマンドを選択。ctrl-rにバインド
-function peco-select-history() {
-  BUFFER=$(\history -n -r 1 | peco --query "$LBUFFER")
+function history_with_peco() {
+  BUFFER=$(\history -n 1 | peco --query "$LBUFFER")
   CURSOR=$#BUFFER
   zle clear-screen
 }
-zle -N peco-select-history
-bindkey '^r' peco-select-history
-
-# search a destination from cdr list
-function peco-get-destination-from-cdr() {
-  cdr -l | \
-  sed -e 's/^[[:digit:]]*[[:blank:]]*//' | \
-  peco --query "$LBUFFER"
-}
+zle -N history_with_peco
+bindkey '^r' history_with_peco
 
 if [ $SHLVL = 1 ]; then
   tmux
