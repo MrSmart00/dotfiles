@@ -38,4 +38,4 @@ brew install --cask bitwarden
 
 brew cleanup
 
-echo "Login App Store and Github then boot dotfiles/install.sh"
+echo "Login Github before boot dotfiles/install.sh"

@@ -13,6 +13,7 @@ formulas=(
     bitrise
     exa
     gh
+    ghq
     git-delta
     mint
     peco
