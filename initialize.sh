@@ -33,7 +33,6 @@ which brew >/dev/null 2>&1 && brew update
 echo "ok. run brew upgrade..."
 brew upgrade
 
-brew install rbenv || brew upgrade rbenv
 brew install --cask bitwarden
 
 brew cleanup

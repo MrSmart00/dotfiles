@@ -17,6 +17,7 @@ formulas=(
     git-delta
     mint
     peco
+    rbenv
     starship
     tmux
 )
@@ -48,6 +49,16 @@ done
 brew cleanup
 
 echo "brew installed"
+
+packages=(
+    bundler
+)
+
+echo "gem install packages"
+
+for package in "${packages[@]}"; do
+    gem install $package
+done
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 source ~/.zshrc
