@@ -68,6 +68,6 @@ echo "zinit inistalled"
 
 mkdir ~/.config
 
-ln -snfv ${PWD}/dotfiles/.config/starship.toml ~/.config
+ln -snfv ${PWD}/dotfiles/.config/starship.toml ~/.config/starship.toml
 
 echo "Starship Config inistalled"
