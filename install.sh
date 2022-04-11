@@ -31,10 +31,7 @@ done
 casks=(
     alacritty
     alfred
-    android-studio
     brave-browser
-    docker
-    flutter
     font-hackgen-nerd
     slack
     visual-studio-code
