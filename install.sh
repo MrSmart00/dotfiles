@@ -45,6 +45,11 @@ done
 
 brew cleanup
 
+echo "set global Ruby version 2.7.4"
+
+rbenv install 2.7.4
+rbenv global 2.7.4
+
 echo "brew installed"
 
 packages=(
@@ -57,7 +62,7 @@ for package in "${packages[@]}"; do
     gem install $package
 done
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+sh -c "$(curl -fsSL https://git.io/zinit-install)"
 source ~/.zshrc
 zinit self-update
 
