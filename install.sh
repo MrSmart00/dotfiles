@@ -68,8 +68,9 @@ zinit self-update
 
 echo "zinit inistalled"
 
+rm -rf ~/.config
 mkdir ~/.config
 
-ln -snfv ${PWD}/dotfiles/.config/starship.toml ~/.config/starship.toml
+ln -fsv ${PWD}/dotfiles/.config/starship.toml ~/.config/starship.toml
 
 echo "Starship Config inistalled"
