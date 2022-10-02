@@ -10,12 +10,10 @@ brew tap beeftornado/rmtree
 
 formulas=(
     bat
-    bitrise
     exa
     gh
     ghq
     git-delta
-    mint
     peco
     rbenv
     starship
@@ -33,9 +31,7 @@ casks=(
     alfred
     brave-browser
     font-hackgen-nerd
-    slack
     visual-studio-code
-    zoom
 )
 
 echo "brew casks"
@@ -44,11 +40,6 @@ for cask in "${casks[@]}"; do
 done
 
 brew cleanup
-
-echo "set global Ruby version 2.7.4"
-
-rbenv install 2.7.4
-rbenv global 2.7.4
 
 echo "brew installed"
 
@@ -62,15 +53,13 @@ for package in "${packages[@]}"; do
     gem install $package
 done
 
-sh -c "$(curl -fsSL https://git.io/zinit-install)"
-source ~/.zshrc
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 zinit self-update
 
 echo "zinit inistalled"
 
-rm -rf ~/.config
 mkdir ~/.config
 
-ln -fsv ${PWD}/dotfiles/.config/starship.toml ~/.config/starship.toml
+ln -snfv ${PWD}/dotfiles/.config/starship.toml ~/.config
 
 echo "Starship Config inistalled"
