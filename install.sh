@@ -50,7 +50,7 @@ packages=(
 echo "gem install packages"
 
 for package in "${packages[@]}"; do
-    gem install $package
+    sudo gem install $package
 done
 
 bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
@@ -60,6 +60,6 @@ echo "zinit inistalled"
 
 mkdir ~/.config
 
-ln -snfv ${PWD}/dotfiles/.config/starship.toml ~/.config
+ln -snfv ${PWD}/dotfiles/.config/starship.toml ~/.config/starship.toml
 
 echo "Starship Config inistalled"

@@ -1,8 +1,5 @@
 
 
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing DHARMA Initiative Plugin Manager (zdharma/zinit)…%f"
@@ -19,9 +16,10 @@ autoload -Uz _zinit
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
-    zdharma-continuum/z-a-patch-dl \
-    zdharma-continuum/z-a-as-monitor \
-    zdharma-continuum/z-a-bin-gem-node
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
 
 source $HOME/.zinit/bin/zinit.zsh
 
@@ -93,13 +91,7 @@ if [ $SHLVL = 1 ]; then
   tmux
 fi
 
-
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
-
-### End of Zinit's installer chunk
+eval $(/usr/local/bin/brew shellenv)
+if [ "$(uname -m)" == 'arm64' ]; then
+    eval $(/opt/homebrew/bin/brew shellenv)
+fi
