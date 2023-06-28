@@ -39,6 +39,8 @@ zinit light zsh-users/zsh-autosuggestions
 ## シンタックスハイライト
 zinit light zsh-users/zsh-syntax-highlighting
 
+eval $(/opt/homebrew/bin/brew shellenv)
+
 ### Boot Starship
 eval "$(starship init zsh)"
 
@@ -91,7 +93,12 @@ if [ $SHLVL = 1 ]; then
   tmux
 fi
 
-eval $(/usr/local/bin/brew shellenv)
-if [[ "$(uname -m)" == 'arm64' ]]; then
-    eval $(/opt/homebrew/bin/brew shellenv)
-fi
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+### End of Zinit's installer chunk

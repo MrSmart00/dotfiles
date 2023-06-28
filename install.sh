@@ -18,6 +18,8 @@ formulas=(
     rbenv
     starship
     tmux
+    xcodesorg/made/xcodes
+    mint
 )
 
 echo "brew install formula"
