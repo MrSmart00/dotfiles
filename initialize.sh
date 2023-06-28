@@ -21,20 +21,45 @@ for f in .??*; do
     ln -snfv ${PWD}/"$f" ~
 done
 
-echo "installing homebrew..."
+# スクリーンショットの撮影時に影を含めない
+defaults write com.apple.screencapture disable-shadow -bool true
+
+# Finderで隠しファイルを表示する
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# Xcodeでビルドにかかった時間を表示する
+defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool true
+
+# シミュレータにタップジェスチャーを表示する
+defaults write com.apple.iphonesimulator ShowSingleTouches 1
+
+# Swiftプロジェクトのビルドを速くする
+defaults write com.apple.dt.XCBuild EnableSwiftBuildSystemIntegration 1
+
+# SystemUIServerを再起動して設定を反映させる
+killall SystemUIServer
+
+# Homebrewをインストールする
+# ref: https://docs.brew.sh/Installation
 which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+source ~/.zshrc
 
-echo "run brew doctor..."
-which brew >/dev/null 2>&1 && brew doctor
+# Homebrewで管理しているパッケージをインストールする
+# ref: https://tech.gootablog.com/article/homebrew-brewfile/
+brew bundle
+source ~/.zshrc
 
-echo "run brew update..."
-which brew >/dev/null 2>&1 && brew update
+packages=(
+    bundler
+)
 
-echo "ok. run brew upgrade..."
-brew upgrade
+echo "gem install packages"
 
-brew install --cask bitwarden
+for package in "${packages[@]}"; do
+    sudo gem install $package
+done
 
-brew cleanup
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+zinit self-update
 
-echo "Login Github before boot dotfiles/install.sh"
+echo "zinit inistalled"
