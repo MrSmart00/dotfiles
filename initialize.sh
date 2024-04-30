@@ -48,13 +48,3 @@ source ~/.zshrc
 # ref: https://tech.gootablog.com/article/homebrew-brewfile/
 brew bundle
 source ~/.zshrc
-
-packages=(
-    bundler
-)
-
-echo "gem install packages"
-
-for package in "${packages[@]}"; do
-    sudo gem install $package
-done
