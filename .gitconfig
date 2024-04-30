@@ -8,9 +8,11 @@
 
 [delta]
     line-numbers=true
+    navigate = true
 
 [diff]
     indent-heuristic = true
+    colorMoved = default
 
 [interactive]
     diffFilter = delta --color-only
@@ -18,3 +20,6 @@
 [user]
 	name = MrSmart00
 	email = nexearth@gmail.com
+
+[merge]
+    conflictstyle = diff3
