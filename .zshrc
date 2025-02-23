@@ -17,6 +17,7 @@ if [[ $(command -v eza) ]]; then
 fi
 
 alias cat='bat'
+alias code='code-insiders'
 
 function g() {
   local selected_dir=$(ghq list -p | peco --query "$LBUFFER")

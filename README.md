@@ -7,8 +7,7 @@ My macOS dotfiles.
 
 ## Installation
 
-1. `$ git clone https://github.com/MrSmart00/dotfiles.git`
-    - If your device doesn't install `CommandLineTools`, you should get error. Please install `CommandLineTools` beforehand.
-        - Maybe your terminal offering install CommandLineTools, you would go through the flow or call `$ xcode-select --install`
+1. `$ xcode-select --install`
+2. `$ git clone https://github.com/MrSmart00/dotfiles.git`
 3. `$ cd ~`
 4. `$ ./dotfiles/initialize.sh`
