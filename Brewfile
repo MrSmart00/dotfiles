@@ -1,5 +1,4 @@
 tap "beeftornado/rmtree"
-tap "homebrew/bundle"
 tap "xcodesorg/made"
 brew "bat"
 brew "gh"
